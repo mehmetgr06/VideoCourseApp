@@ -1,0 +1,216 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/createLessonLinearLayout"
+    tools:context="com.mehmet.kursdunyasi.Fragments.CreateLessonFragment">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#fff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@color/colorWhiteDark"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/createLessonCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:text="İptal"
+                android:textAlignment="textStart"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Kurs Oluştur"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/createLessonAcceptButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingRight="10dp"
+                android:text="Onayla"
+                android:textAlignment="textEnd"
+                android:textColor="#0984e3"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="#fff">
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:paddingRight="8dp"
+            android:paddingLeft="8dp"
+            android:orientation="vertical"
+            android:background="@color/colorWhiteDark2"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/courseTitleEdittext"
+                android:layout_width="match_parent"
+                android:hint="Kurs Başlığı"
+                android:layout_height="wrap_content" />
+
+
+            <EditText
+                android:id="@+id/courseDescriptionEdittext"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:hint="Kurs Tanımı"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/courseKeywordsEdittext"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:hint="Anahtar Kelimeler"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Kategori:"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:textStyle="bold"/>
+
+
+                <Spinner
+                    android:id="@+id/courseCategorySpinner"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="match_parent"></Spinner>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Seviye:"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:textStyle="bold"/>
+
+                <Spinner
+                    android:id="@+id/courseLevelSpinner"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="match_parent"></Spinner>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/videoTitleEdittext"
+                android:hint="İlk Videonuzun Başlığı"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ProgressBar
+                android:visibility="invisible"
+                android:id="@+id/progresBarCreateLesson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/selectCoverImageButton"
+                    android:background="@drawable/menu_button_background"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:text="Kapak Resmi Seç"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/courseCoverImage"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/selectCourseVideoButton"
+                    android:background="@drawable/menu_button_background"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:text="Video seç"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/videoCoverImageView"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
